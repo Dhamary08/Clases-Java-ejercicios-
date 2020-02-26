@@ -3,10 +3,10 @@
  */
 package Electro;
 
-public class Electrodoméstico {
+public class ElectrodomÃ©stico {
 
 	/*
-	 * Definición de variables
+	 * DefiniciÃ³n de variables
 	 */
 	protected String sColor;
 	protected char cConsumoEnergetico; // de la A a la F
@@ -63,9 +63,9 @@ public class Electrodoméstico {
 
 	/*
 	 * comprobarColor(String sColor):Los sColores disponibles son blanco, negro,
-	 * rojo, azul y gris. No importa si el nombre está en mayúsculas o en
-	 * minúsculas. Comprueba que el sColor es correcto, sino lo es usa el sColor por
-	 * defecto. Se invocará al crear el objeto y no será visible.
+	 * rojo, azul y gris. No importa si el nombre estÃ¡ en mayÃºsculas o en
+	 * minÃºsculas. Comprueba que el sColor es correcto, sino lo es usa el sColor por
+	 * defecto. Se invocarÃ¡ al crear el objeto y no serÃ¡ visible.
 	 */
 
 	public void comprobarColor(String sColor) {
@@ -87,10 +87,29 @@ public class Electrodoméstico {
 
 	/*
 	 * comprobarConsumoEnergetico(char letra):comprueba que la letra es correcta,
-	 * sino es correcta usara la letra por defecto. Se invocará al crear el objeto y
+	 * sino es correcta usara la letra por defecto. Se invocarÃ¡ al crear el objeto y
 	 * no sera visible.
 	 */
-
+/*
+*Igual Funciona comprobado
+*/
+//	public void comprobarConsumoEnergetico(char cConsumoEnergetico) {
+//		char consumoDisponibles[] = { 'A', 'B', 'C', 'D', 'E', 'F' };
+//
+//		
+//		// busca los parametro
+//		int i = 0;
+//		while (i > 6) {
+//			i++;
+//			if (consumoDisponibles[i] == cConsumoEnergetico) {
+//				this.cConsumoEnergetico = cConsumoEnergetico;
+//			} else {
+//				this.cConsumoEnergetico = CONS_ENER_DEFECTO;
+//			}
+//		}
+//
+//	}	
+	
 	public void comprobarConsumoEnergetico(char consumoEnergetico) {
 
 		if (cConsumoEnergetico >= 65 && cConsumoEnergetico <= 70) {
@@ -102,8 +121,8 @@ public class Electrodoméstico {
 	}
 
 	/*
-	 * precioFinal():según el consumo energético, aumentara su precio, y según su
-	 * tamaño también.
+	 * precioFinal():segÃºn el consumo energÃ©tico, aumentara su precio, y segÃºn su
+	 * tamaÃ±o tambiÃ©n.
 	 */
 
 	public double precioFinal() {
@@ -141,14 +160,14 @@ public class Electrodoméstico {
 		return dValorFinal + dPrecioBase;
 	}
 
-	public Electrodoméstico() {
+	public ElectrodomÃ©stico() {
 		this(COLOR_DEFEFECTO, CONS_ENER_DEFECTO, PRECIO_DEFECTO, PESO_DEFECTO);
 	}
 
 	/*
 	 * Un constructor con el precio y dPeso. El resto por defecto
 	 */
-	public Electrodoméstico(double dPrecioBase, double dPeso) {
+	public ElectrodomÃ©stico(double dPrecioBase, double dPeso) {
 		this(COLOR_DEFEFECTO, CONS_ENER_DEFECTO, dPrecioBase, dPeso);
 	}
 
@@ -156,7 +175,7 @@ public class Electrodoméstico {
 	 * Un constructor con todos los atributos.
 	 */
 
-	public Electrodoméstico(String sColor, char sConsumoEnergetico, double dPrecioBase, double dPeso) {
+	public ElectrodomÃ©stico(String sColor, char sConsumoEnergetico, double dPrecioBase, double dPeso) {
 		comprobarColor(sColor);
 		comprobarConsumoEnergetico(sConsumoEnergetico);
 		this.dPrecioBase = dPrecioBase;
