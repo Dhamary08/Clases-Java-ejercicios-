@@ -47,5 +47,4 @@ public class Ejercicio_1_while_mientras {
 			return false;
 		}
 	}
-
 }
