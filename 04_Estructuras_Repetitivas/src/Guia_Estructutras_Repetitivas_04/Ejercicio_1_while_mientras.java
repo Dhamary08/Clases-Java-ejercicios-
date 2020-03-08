@@ -1,6 +1,6 @@
 /**
  * 1.	Realice un algoritmo para obtener la suma de 15 cantidades 
- * mediante la utilizaci�n de un ciclo �Mientras�
+ * mediante la utilización de un ciclo “Mientras”
  */
 package Guia_Estructutras_Repetitivas_04;
 
@@ -13,19 +13,41 @@ public class Ejercicio_1_while_mientras {
 
 		Scanner sc = new Scanner(System.in);
 
-		int numero, opcion, suma;
+		String numero;
+		int opcion, suma;
 
 		opcion = 0;
 		suma = 0;
 
-		while (opcion < 15) {
-			opcion++;
-			System.out.printf("Ingrese numero %s: ", opcion);
-			numero = sc.nextInt();
-			suma = suma + numero;
+		while (opcion < 3) {
+			
+			System.out.printf("Ingrese %s° numero: ", (opcion+1));
+			numero = sc.next();
+
+			if (esNumero(numero) == true) {
+				int num = Integer.parseInt(numero);
+				opcion++;
+				suma = suma + num;
+			}else {
+				System.out.printf("%s, \"No es un número válido\"",numero);
+				System.out.printf("\nIngrese un número válido\n");
+			}
 		}
 		System.out.printf("\n**********************");
 		System.out.printf("\nSuma Total es= %s", suma);
+
+	}
+
+	/*
+	 * VERIFICA NUMERO
+	 */
+	public static boolean esNumero(String retiro) {
+		try {
+			Integer.parseInt(retiro);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 }
